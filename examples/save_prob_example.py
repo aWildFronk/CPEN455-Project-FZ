@@ -26,7 +26,7 @@ from model.tokenizer import Tokenizer
 from utils.download import _resolve_snapshot_path
 from utils.device import set_device
 from examples.bayes_inverse import save_probs
-
+os.environ["WANDB_MODE"] = "offline"
 if __name__ == "__main__":
     # random seed for reproducibility
     torch.manual_seed(0)

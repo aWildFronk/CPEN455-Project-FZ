@@ -33,7 +33,8 @@ from utils.download import _resolve_snapshot_path
 from utils.device import set_device
 from utils.prompt_template import get_prompt
 from utils.logger import avg_logger, avg_acc_logger
-    
+
+os.environ["WANDB_MODE"] = "offline"
 def get_seq_log_prob(prompts, tokenizer, model, device):
     encoded_batch = tokenizer.encode(
         prompts, return_tensors="pt", return_attention_mask=True

@@ -23,7 +23,7 @@ from model.config import Config
 from model.tokenizer import Tokenizer
 from utils.download import _resolve_snapshot_path
 from utils.device import set_device
-
+os.environ["WANDB_MODE"] = "offline"
 if __name__ == "__main__":
     load_dotenv()
     
